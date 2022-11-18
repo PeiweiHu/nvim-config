@@ -86,4 +86,7 @@ return require('packer').startup(function()
     -- decorated scrollbar
     --use 'lewis6991/satellite.nvim'
 
+    	-- remove trailing whitespace and empty lines at the end
+    	use 'mcauley-penney/tidy.nvim'
+
 end)

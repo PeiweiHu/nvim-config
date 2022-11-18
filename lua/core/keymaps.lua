@@ -15,6 +15,9 @@ local function set_bg_dark()
 end
 
 -- keymaps
+vim.keymap.set('n', '<C-s>', ':w<cr>') -- save file
+vim.keymap.set('n', '<C-n>', ':bn<cr>') -- next file
+
 vim.keymap.set('i', '<C-g>', '<esc>')
 vim.keymap.set('i', '<C-;>', '::') -- for C++ and Rust
 vim.keymap.set('n', '<leader>vl', set_bg_light)
@@ -26,12 +29,13 @@ vim.keymap.set('n', '<leader>ft', ':NvimTreeToggle<cr>')
 vim.keymap.set('n', '<leader>ff', ':NvimTreeFocus<cr>')
 -- y: telescope
 vim.keymap.set('n', '<F9>', function() require 'telescope.builtin'.find_files {} end)
-vim.keymap.set('n', '<F10>', function() require 'telescope.builtin'.git_files {} end)
+-- vim.keymap.set('n', '<F10>', function() require 'telescope.builtin'.git_files {} end)
+vim.keymap.set('n', '<F10>', function() require 'telescope.builtin'.live_grep {} end)
 vim.keymap.set('n', '<F11>', function() require 'telescope.builtin'.buffers {} end)
 vim.keymap.set({ 'n', 'i' }, '<C-p>', function() require 'telescope.builtin'.registers {} end)
 -- w: window
 vim.keymap.set('n', '<leader>w1', '<c-w>o')
-vim.keymap.set('n', '<leader>wx', ':x<cr>')
+vim.keymap.set('n', '<leader>ww', ':x<cr>')
 vim.keymap.set('n', '<leader>w2', ':sp<cr>')
 vim.keymap.set('n', '<leader>w3', ':vs<cr>')
 -- window resize
@@ -58,7 +62,8 @@ vim.keymap.set('n', '<leader>le', ':Lspsaga show_line_diagnostics<cr>')
 vim.keymap.set('n', '<leader>lE', ':Lspsaga show_cursor_diagnostics<cr>')
 vim.keymap.set('n', '<leader>lq', vim.diagnostic.setloclist)
 vim.keymap.set('n', '<leader>lk', vim.lsp.buf.hover)
-vim.keymap.set('n', '<leader>ld', ':Lspsaga preview_definition<cr>')
+-- vim.keymap.set('n', '<leader>ld', ':Lspsaga preview_definition<cr>')
+vim.keymap.set('n', '<leader>ld', ':Lspsaga peek_definition<cr>')
 vim.keymap.set('n', '<leader>lr', ':Lspsaga rename<cr>')
 vim.keymap.set('n', '<leader>lh', vim.lsp.buf.signature_help)
 vim.keymap.set('n', '<leader>la', vim.lsp.buf.code_action)
