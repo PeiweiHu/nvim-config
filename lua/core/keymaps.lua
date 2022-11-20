@@ -17,6 +17,10 @@ end
 -- keymaps
 vim.keymap.set('n', '<C-s>', ':w<cr>') -- save file
 vim.keymap.set('n', '<C-n>', ':bn<cr>') -- next file
+vim.keymap.set('n', '<C-j>', '<C-e>') -- scroll down
+vim.keymap.set('n', '<C-k>', '<C-y>') -- scroll up
+vim.keymap.set('n', '<C-l>', '<C-w><C-l>') -- focus on right window
+vim.keymap.set('n', '<C-h>', '<C-w><C-h>') -- focus on left window
 
 vim.keymap.set('i', '<C-g>', '<esc>')
 vim.keymap.set('i', '<C-;>', '::') -- for C++ and Rust
