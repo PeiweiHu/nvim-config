@@ -27,6 +27,15 @@ vim.keymap.set('i', '<C-;>', '::') -- for C++ and Rust
 vim.keymap.set('n', '<leader>vl', set_bg_light)
 vim.keymap.set('n', '<leader>vd', set_bg_dark)
 vim.keymap.set('n', '<leader>', ':')
+
+-- z: ufo
+vim.keymap.set('n', 'zr', require('ufo').openAllFolds)
+vim.keymap.set('n', 'zm', require('ufo').closeAllFolds)
+vim.keymap.set('n', '<C-r>', ':foldopen<cr>')
+vim.keymap.set('n', '<C-m>', ':foldclose<cr>')
+-- vim.keymap.set('n', 'zr', require('ufo').openFoldsExceptKinds)
+-- vim.keymap.set('n', 'zm', require('ufo').closeFoldsWith) -- closeAllFolds == closeFoldsWith(0)
+
 -- f: file tree
 vim.keymap.set('n', '<F3>', ':NvimTreeToggle<cr>')
 vim.keymap.set('n', '<leader>ft', ':NvimTreeToggle<cr>')

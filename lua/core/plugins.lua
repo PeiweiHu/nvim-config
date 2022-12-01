@@ -3,6 +3,12 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
 	use 'wbthomason/packer.nvim'
 
+	--- fold
+	use {
+		'kevinhwang91/nvim-ufo',
+		requires = 'kevinhwang91/promise-async'
+	}
+
 	-- starup time optimise
 	use 'dstein64/vim-startuptime'
 	use 'lewis6991/impatient.nvim'
