@@ -17,6 +17,7 @@ end
 -- keymaps
 vim.keymap.set('n', '<C-s>', ':w<cr>') -- save file
 vim.keymap.set('n', '<C-n>', ':bn<cr>') -- next file
+vim.keymap.set('n', '<C-p>', ':bp<cr>') -- previous file
 vim.keymap.set('n', '<C-j>', '<C-e>') -- scroll down
 vim.keymap.set('n', '<C-k>', '<C-y>') -- scroll up
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>') -- focus on right window
@@ -45,7 +46,7 @@ vim.keymap.set('n', '<F9>', function() require 'telescope.builtin'.find_files {}
 -- vim.keymap.set('n', '<F10>', function() require 'telescope.builtin'.git_files {} end)
 vim.keymap.set('n', '<F10>', function() require 'telescope.builtin'.live_grep {} end)
 vim.keymap.set('n', '<F11>', function() require 'telescope.builtin'.buffers {} end)
-vim.keymap.set({ 'n', 'i' }, '<C-p>', function() require 'telescope.builtin'.registers {} end)
+-- vim.keymap.set({ 'n', 'i' }, '<C-p>', function() require 'telescope.builtin'.registers {} end)
 -- w: window
 vim.keymap.set('n', '<leader>w1', '<c-w>o')
 vim.keymap.set('n', '<leader>ww', ':x<cr>')
