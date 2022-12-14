@@ -9,6 +9,13 @@ return require('packer').startup(function()
 		requires = 'kevinhwang91/promise-async'
 	}
 
+	--- bookmark
+	use {
+		'crusj/bookmarks.nvim',
+		branch = 'main',
+		requires = { 'kyazdani42/nvim-web-devicons' }
+	}
+
 	-- starup time optimise
 	use 'dstein64/vim-startuptime'
 	use 'lewis6991/impatient.nvim'
